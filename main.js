@@ -3,7 +3,6 @@ const score = document.querySelector(".score"),
   gameArea = document.querySelector(".gameArea"),
   car = document.createElement("div");
 car.classList.add("car");
-let bestScore;
 
 
 const keys = {
@@ -19,6 +18,8 @@ const setting = {
   speed: 3,
   traffic: 3,
 };
+
+
 
 function startMusic(){
   document.querySelector("audio").play();
@@ -57,9 +58,7 @@ function moveEnemy() {
         stopMusic();
         start.classList.remove("hide");
         score.style.top = '50%';
-        bestScore = setting.score;
-        localStorage.setItem("key",bestScore);
-
+              
     }
 
 
